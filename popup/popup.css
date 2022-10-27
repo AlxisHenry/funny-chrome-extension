@@ -1,0 +1,149 @@
+/* Fonts */
+
+@font-face {
+	font-family: Proxima Nova;
+	src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.eot);
+	src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.eot?#iefix) format("embedded-opentype"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.woff2) format("woff2"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.woff) format("woff"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.ttf) format("truetype"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.svg#wf) format("svg");
+	font-weight: 300;
+	font-style: normal;
+}
+  
+@font-face {
+	font-family: Proxima Nova;
+	src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.eot);
+	src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.eot?#iefix) format("embedded-opentype"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.woff2) format("woff2"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.woff) format("woff"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.ttf) format("truetype"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.svg#wf) format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+  
+@font-face {
+	font-family: Proxima Nova;
+	src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.eot);
+	src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.eot?#iefix) format("embedded-opentype"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.woff2) format("woff2"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.woff) format("woff"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.ttf) format("truetype"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.svg#wf) format("svg");
+	font-weight: 700;
+	font-style: normal;
+}
+
+/* Themes */
+
+:root {
+	--font-proxima: 'Proxima Nova', sans-serif;
+}
+
+#light {
+	/* https://colorhunt.co/palette/b1b2ffaac4ffd2daffeef1ff */
+	/* https://colorhunt.co/palette/f5efe6e8dfcaaebdca7895b2 */
+	--popup-background: #F5EFE6;
+	--popup-base-color: #000;
+	--buton-background: #7895B2;
+	--buton-border: #AEBDCA;
+	/* B1B2FF */
+}
+
+#dark {
+	/* https://colorhunt.co/palette/1b243051557e816797d6d5a8 */
+	--popup-background: #1B2430;
+	--popup-base-color: #F2F2F2;
+	--buton-background: #816797;
+	--buton-border: #51557E;
+	/* D6D5A8 */
+}
+
+/* Wrappers & Containers */
+
+.wrapper {
+    color: var(--popup-base-color);
+    background-color: var(--popup-background);
+	font-family: var(--font-proxima);
+	min-width: 250px;
+	overflow: scroll;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.searchbar-container {
+	margin-top: 32px;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+	margin-bottom: 32px;
+}
+
+/* Extension title */
+
+.wrapper .title {
+	margin-top: 16px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+/* Searchbar */
+
+#search-tag {
+	font-size: 14px;
+	padding: 0.725rem;
+	border: 1px solid #C1C1C1;
+	background-color: white;
+	width: 100%;
+	border-radius: 10px;
+	transition: .2s
+}
+
+#search-tag:hover {
+	border-color: #AAAAAA;
+}
+
+/* Clear changes button */
+
+button {
+	color: var(--popup-base-color);
+	background-color: var(--buton-background);
+	border:none;
+	font-size:16px;
+	min-width: 200px;
+	min-height: 55px;
+	max-height: 55px;
+	max-width: 200px;
+	padding:20px 40px;
+	text-transform:capitalize;
+	cursor:pointer;
+	transform:all 0.3s;
+	position:relative;
+  }
+
+button:before{
+	content:"";
+	position :absolute;
+	width:24px;
+	height:24px;
+	top:-5px;
+	  left:-5px;
+	border-top:2px solid var(--buton-border);
+	border-left:2px solid var(--buton-border);
+	transition:all 0.25s;
+}
+  
+button:hover:before ,button:hover:after{
+	width:104%;
+	height:110%;
+}
+  
+button:after{
+	content:"";
+	position :absolute;
+	width:24px;
+	height:24px;
+	bottom:-5px;
+	  right:-5px;
+	border-bottom:2px solid var(--buton-border);
+	border-right:2px solid var(--buton-border);
+	transition:all 0.30s;
+}

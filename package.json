@@ -1,0 +1,23 @@
+{
+  "name": "funny-chrome-extension",
+  "version": "1.0.0",
+  "description": "Funny extension to delete all elements of the page !",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint popup.js --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlxisHenry/clock-chrome-extension.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlxisHenry/clock-chrome-extension/issues"
+  },
+  "homepage": "https://github.com/AlxisHenry/clock-chrome-extension#readme",
+  "dependencies": {
+    "chrome-types": "^0.1.143",
+    "eslint": "^7.12.1"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "HTML Destroyer",
+  "description": "Funny extension who remove all elements on the page !",
+  "version": "1.0",
+  "action": {
+    "default_popup": "./popup/popup.html",
+    "default_icon": "./images/icon.png"  
+  }
+}
