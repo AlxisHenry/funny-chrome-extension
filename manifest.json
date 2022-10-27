@@ -2,6 +2,7 @@
   "manifest_version": 3,
   "name": "HTML Destroyer",
   "description": "Funny extension who remove all elements on the page !",
+  "permissions": ["storage", "declarativeContent", "activeTab", "scripting"],
   "version": "1.0",
   "action": {
     "default_popup": "./popup/popup.html",

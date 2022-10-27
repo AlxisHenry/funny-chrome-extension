@@ -1,17 +1,4 @@
 /**
- * Remove all elements corresponding to the given tag
- * 
- * @param {string} tag
- * @returns {void} 
- */
-function removeElements(tag) {
-	Array.from(document.getElementsByTagName(tag)).forEach(($el) => {
-		// $el.remove()
-		console.log($el)
-	})
-}
-
-/**
  * Get available tags from the json file
  * 
  * @returns {Promise<Array<String>>}
@@ -55,11 +42,16 @@ function search() {
 	const tag = document.getElementById('search-tag').value
 
 	if (tagAvailability(tag)) {
-		removeElements(tag)
+		console.log(tag)
 	} else {
 		throw new Event('Tag not available')
 	}
 }
+
+chrome.scripting.executeScript({
+	target: { tag: 'body' },
+	func: () => console.log('ok')
+})
 
 
 document.querySelector('.btn-submit').addEventListener('click', () => {
